@@ -1,1 +1,18 @@
 /*  your css code here. If applicable */
+.container {
+	max-height: 100%;
+	max-width: 100%;
+	position: relative;
+	transform: translate(50%,50%)
+}
+.sub-container {
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+	text-align: center;
+	background-color: lightcyan;
+}
+.text{
+	margin-top: 40%;
+	color: maroon;
+}

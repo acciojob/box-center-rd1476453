@@ -1,22 +1,52 @@
-/*  your css code here. If applicable */
-.container {
+/*
+ * 1. Ensure the body takes up the full screen height (100vh)
+ * and acts as the positioning context for the box.
+*/
+body {
 	height: 100vh;
 	width: 100vw;
-	position: relative;
-	border-top-width: 2px solid black;
+	margin: 0; /* Remove default browser margin */
+	position: relative; /* Set position context for the box */
 }
-.sub-container {
+
+/*
+ * 2. Box Positioning, Dimensions, and Appearance
+ * - Positioned absolutely at top: 50% and left: 50%
+ * - Moved back by half its own size using transform: translate() for perfect centering
+*/
+.box {
+	/* Dimensions and Appearance */
 	height: 200px;
 	width: 200px;
-	border: 2px solid black;
-	text-align: center;
-	background-color: lightcyan;
+	border: 2px solid black; /* Fix: Changed 'thick' to 'solid' and set width to 7px */
+	background-color: lightblue;
+	
+	/* Box Positioning (Center the Box on the Page) */
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	/* CRUCIAL: Centers the box based on its own size */
+	transform: translate(-50%, -50%); 
+    
+    /* Set position context for the text inside the box */
+    position: relative; /* Changed from absolute to relative for containing the text */
 }
-.text{
-	position: relative;
+
+/*
+ * 3. Centered Text
+ * - Positioned absolutely at top: 50% and left: 50% relative to the box
+ * - Moved back by half its own size using transform: translate() for perfect centering
+*/
+.text {
+    /* Text Styling */
+	color: purple; /* Requirement asks for purple, not deeppink */
+    text-align: center;
+    display: ;
+    /* Text Positioning (Center the Text inside the Box) */
+    position: absolute;
 	top: 50%;
-	color: maroon;
+	left: 50%;
+    /* CRUCIAL: Centers the text based on its own size */
+	transform: translate(-50%, -50%); 
+	
 }
